@@ -1774,6 +1774,7 @@ D. Plugins Styles
   text-align: center;
   transition: 0.3s ease;
   width: 2.5rem;
+  
 }
 
 .owl-carousel .owl-nav .owl-prev:after,
@@ -1791,7 +1792,10 @@ D. Plugins Styles
 }
 
 .owl-carousel .owl-nav .owl-next {
-  right: 0.3125rem;
+  /* right: 0.3125rem; */
+    right: -3rem;
+  
+
 }
 
 .owl-carousel .owl-nav .owl-next:after {
@@ -1800,7 +1804,9 @@ D. Plugins Styles
 }
 
 .owl-carousel .owl-nav .owl-prev {
-  left: 0.3125rem;
+  /* left: 0.3125rem; */
+      left: -3rem;
+  
 }
 
 .owl-carousel .owl-nav .owl-prev:after {

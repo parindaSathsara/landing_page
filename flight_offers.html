@@ -42,24 +42,28 @@
                             <a class="nav-item nav-link ts-scroll" href="#gallery">Galley</a>
                             <a class="nav-item nav-link ts-scroll" href="#form-contact">Contact</a> -->
                             <!-- <a href="https://www.aahaas.com" class="website-link" style="color: #ed4242;" target="_blank"><h4>Visit Aahaas</h4></a> -->
-                             <a href="https://www.aahaas.com" 
-   target="_blank" 
-   style="
-     display: inline-block; 
-     padding: 10px 20px; 
-     background-color: #ed4242; 
-     color: white; 
-     text-decoration: none; 
-     border-radius: 25px; 
-     font-weight: bold; 
-     font-size: 16px;
-     transition: transform 0.3s ease, background-color 0.3s ease;
-   "
-   onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundColor='#c73434';"
-   onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='#ed4242';"
->
-  Visit Aahaas
-</a>
+                            
+                            <!-- href="https://www.aahaas.com" 
+                                target="_blank"  -->
+                            <button 
+                            
+                                style="
+                                    display: inline-block; 
+                                    padding: 10px 20px; 
+                                    background-color: #ed4242; 
+                                    color: white; 
+                                    text-decoration: none; 
+                                    border-radius: 25px; 
+                                    font-weight: bold; 
+                                    font-size: 16px;
+                                    transition: transform 0.3s ease, background-color 0.3s ease;
+                                "
+                                onclick="window.parent.postMessage({ type: 'openLink', url: 'https://www.aahaas.com' }, '*');"
+                                onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundColor='#c73434';"
+                                onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='#ed4242';"
+                            >
+                            Visit Aahaas
+                        </button>
 
                         </div>
                     </div>
