@@ -45,7 +45,29 @@
                             
                             <!-- href="https://www.aahaas.com" 
                                 target="_blank"  -->
-                            <button 
+                                <button 
+    style="
+        display: inline-block; 
+        padding: 10px 20px; 
+        background-color: #ed4242; 
+        color: white; 
+        text-decoration: none; 
+        border-radius: 25px; 
+        font-weight: bold; 
+        font-size: 16px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        border: 2px solid white;
+        outline: none;
+        cursor: pointer;
+    "
+    onclick="window.parent.postMessage({ type: 'openLink', url: 'https://www.aahaas.com' }, '*');"
+    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundColor='#c73434';"
+    onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='#ed4242';"
+>
+    Visit Aahaas
+</button>
+
+                            <!-- <button 
                             
                                 style="
                                     display: inline-block; 
@@ -64,7 +86,7 @@
                                 onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='#ed4242';"
                             >
                             Visit Aahaas
-                        </button>
+                        </button> -->
 
                         </div>
                     </div>
