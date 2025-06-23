@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="ThemeStarz">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+	<title>Aahaas</title>
+  <link rel="icon" type="image/png" href="https://gateway.aahaas.com/monogram.png" style="width: 10px; height: auto;">
+
+   <style>
+     .airline-schedule {
+    /* background: rgba(255, 253, 253, 0.2);  */
+    border-radius: 8px;
+    /* padding: 12px; */
+    margin: 15px 0;
+    backdrop-filter: blur(8px);
+    /* border: 1px solid rgb(255, 255, 255); */
+    width: 600px;
+}
+
+.airline-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.airline-day {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    /* background: rgb(254, 254, 255); */
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 100px;
+}
+
+.airline-day:hover {
+    /* background: rgba(9, 10, 35, 0.464); */
+    transform: translateY(-2px);
+}
+
+.airline-day.today {
+    background: rgba(237, 66, 66, 0.15);
+    border: 1px solid #ed4242;
+}
+
+.day-date {
+    font-weight: 600;
+    color: #ed4242;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.airline-name {
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 13px;
+    flex: 1;
+    margin-right: 6px;
+}
+
+.airline-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: white;
+}
+
+.airline-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 6px;
+}
+
+.bank-icons-section {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.bank-icons-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.bank-icon {
+    width: "100%";
+    height: 30px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* opacity: 0.8; */
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.bank-icon:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.bank-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.schedule-title {
+    color: rgb(253, 253, 253);
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.schedule-title::before {
+
+    margin-right: 4px;
+    font-size: 10px;
+}
+
+ .airline-logo2 {
+        width: 170px;
+        height: 45px;
+    }
+
+@media (max-width: 768px) {
+    .airline-schedule {
+        padding: 15px;
+        margin: 15px 0;
+           width: 300px;
+    }
+    
+    .airline-row {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .airline-day {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .day-date {
+        font-size: 10px;
+    }
+    
+    .airline-name {
+        font-size: 12px;
+    }
+    
+    .airline-logo {
+        width: 14px;
+        height: 14px;
+    }
+
+   
+}
+    </style>
+
+</head>
+<body data-spy="scroll" data-target=".navbar" class="has-loading-screen" data-bg-parallax="scroll" data-bg-parallax-speed="3">
+    <div class="ts-page-wrapper" id="page-top">
+        <!--*********************************************************************************************************-->
+        <!--************ HERO ***************************************************************************************-->
+        <!--*********************************************************************************************************-->
+        <header id="ts-hero" class="ts-full-screen">
+
+            <!--NAVIGATION ******************************************************************************************-->
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top ts-separate-bg-element" data-bg-color="#fff">
+                <div class="container">
+                    <a class="navbar-brand" href="#page-top">
+                        <img src="https://gateway.aahaas.com/aahaas.png" alt="" style="width: 200px; height: auto;">
+                    </a>
+                    <!--end navbar-brand-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!--end navbar-toggler-->
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav ml-auto">
+                            <!-- <a class="nav-item nav-link active ts-scroll" href="#page-top">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-item nav-link ts-scroll" href="#how-it-looks">How It Looks</a>
+                            <a class="nav-item nav-link ts-scroll" href="#what-is-appstorm">About</a>
+                            <a class="nav-item nav-link ts-scroll" href="#pricing">Pricing</a>
+                            <a class="nav-item nav-link ts-scroll" href="#our-clients">Our Clients</a>
+                            <a class="nav-item nav-link ts-scroll" href="#gallery">Galley</a>
+                            <a class="nav-item nav-link ts-scroll" href="#form-contact">Contact</a> -->
+                            <!-- <a href="https://www.aahaas.com" class="website-link" style="color: #ed4242;" target="_blank"><h4>Visit Aahaas</h4></a> -->
+                            
+                            <!-- href="https://www.aahaas.com" 
+                                target="_blank"  -->
+                                <button 
+    style="
+        display: inline-block; 
+        padding: 10px 20px; 
+        background-color: #ed4242; 
+        color: white; 
+        text-decoration: none; 
+        border-radius: 25px; 
+        font-weight: bold; 
+        font-size: 16px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        border: 2px solid white;
+        outline: none;
+        cursor: pointer;
+    "
+    onclick="window.parent.postMessage({ type: 'openLink', url: 'https://www.aahaas.com' }, '*');"
+    onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundColor='#c73434';"
+    onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='#ed4242';"
+>
+    Visit Aahaas
+</button>
+
+                            <!-- <button 
+                            
+                                style="
+                                    display: inline-block; 
+                                    padding: 10px 20px; 
+                                    background-color: #ed4242; 
+                                    color: white; 
+                                    text-decoration: none; 
+                                    border-radius: 25px; 
+                                    font-weight: bold; 
+                                    font-size: 16px;
+                                    transition: transform 0.3s ease, background-color 0.3s ease;
+                                    border-color: white ;
+                                "
+                                onclick="window.parent.postMessage({ type: 'openLink', url: 'https://www.aahaas.com' }, '*');"
+                                onmouseover="this.style.transform='scale(1.05)'; this.style.backgroundColor='#c73434';"
+                                onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='#ed4242';"
+                            >
+                            Visit Aahaas
+                        </button> -->
+
+                        </div>
+                    </div>
+                    <!--end collapse-->
+                </div>
+                <!--end container-->
+            </nav>
+            <!--end navbar-->
+
+            <!--HERO CONTENT ****************************************************************************************-->
+            <div style="margin-top: 10%;"  class="container align-self-center">
+                <div class="row align-items-center">
+                    <div class="col-sm-9"> 
+                        <!-- <h4 style="color:#0c0c0c; font-weight: bold;" class="ts-font-color__black ts-opacity__50">Explore the World for Less</h4> -->
+                        <!-- <h1 style="color: rgb(253, 253, 253); font-weight: bold;"> Save <span style="color: #ed4242;">20,000 LKR</span> on Flights! First 100 Only</h1> -->
+                        <h2 style="color: rgb(253, 253, 253); font-weight: bold; "> Enjoy Your Journey Only For <span style="color: #ed4242;">9,999 LKR</span> ! </h2>
+<h3>Exclusively for the First 500 Customers</h3>
+
+   <div class="airline-schedule">
+                            <div class="schedule-title">Featured Countries</div>
+                            
+                            <div class="airline-row">
+                                <div class="airline-day">
+                                    <div class="airline-content">
+                                      <span class="day-date" style="
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.0rem;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  /* background: rgb(75, 206, 211); */
+  backdrop-filter: blur(3px);
+  display: inline-block;
+  font-family: 'Segoe UI', sans-serif;
+  border: 1px solid white;
+  
+">
+  ＢＡＬＩ
+   <!-- BALI -->
+</span>
+                                        <!-- <span class="airline-name" style="color: black;">Malaysia Airlines</span> -->
+                                    </div>
+                                    <!-- <img src="assets/img/Layer1.png" alt="Malaysia Airlines" class="airline-logo2"> -->
+                                </div>
+                                
+                                 <div class="airline-day">
+                                    <div class="airline-content">
+                                         <span class="day-date" style="
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.0rem;
+  letter-spacing: 3px;
+  /* text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); */
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+   /* background: rgb(58, 150, 153); */
+  backdrop-filter: blur(3px);
+  display: inline-block;
+  font-family: 'Segoe UI', sans-serif;
+   border: 1px solid white;
+">ＤＵＢＡＩ</span>
+                                        <!-- <span class="airline-name" style="color: black;">Malaysia Airlines</span> -->
+                                    </div>
+                                    <!-- <img src="assets/img/Layer2.png" alt="Malaysia Airlines" class="airline-logo2"> -->
+                                </div>
+                                
+                                 <div class="airline-day ">
+                                    <div class="airline-content">
+                                        <!-- <span class="day-date">Tue, Jun 17</span> -->
+                                          <span class="day-date" style="
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.0rem;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  /* background: rgb(0, 26, 44); */
+  backdrop-filter: blur(3px);
+  display: inline-block;
+  font-family: 'Segoe UI', sans-serif;
+   border: 1px solid white;
+">ＨＡＮＯＩ</span>
+                                        <!-- <span class="airline-name" style="color: black;">Malaysia Airlines</span> -->
+                                    </div>
+                                    <!-- <img src="assets/img/Layer3.png" alt="Malaysia Airlines" class="airline-logo2"> -->
+                                </div>
+                            </div>
+                            
+                            <div class="airline-row">
+                                 <div class="airline-day">
+                                    <div class="airline-content">
+                                        <!-- <span class="day-date">Tue, Jun 17</span> -->
+                                          <span class="day-date" style="
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.0rem;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  /* background: rgb(241, 238, 5); */
+  backdrop-filter: blur(3px);
+  display: inline-block;
+  font-family: 'Segoe UI', sans-serif;
+   border: 1px solid white;
+">ＢＡＮＧＬＯＲ</span>
+                                        <!-- <span class="airline-name" style="color: black;">Malaysia Airlines</span> -->
+                                    </div>
+                                    <!-- <img src="assets/img/Layer4.png" alt="Malaysia Airlines" class="airline-logo2"> -->
+                                </div>
+                                
+                                <div class="">
+                                    <div class="airline-content">
+                                         <span class="day-date" style="
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.0rem;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  /* background: rgb(231, 94, 3); */
+  backdrop-filter: blur(3px);
+  display: inline-block;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 4px;
+   border: 1px solid white;
+">ＫＵＡＬＡ ＬＵＭＰＵＲ</span>
+                                        <!-- <span class="airline-name" style="color: black;">Malaysia Airlines</span> -->
+                                    </div>
+                                    <!-- <img src="assets/img/Layer5.png" alt="Malaysia Airlines" class="airline-logo2"> -->
+                                </div>
+                                
+                                 <div class="airline-day">
+                                    <div class="airline-content">
+                                         <!-- <span class="day-date" style=" color: white; font-weight: bolder;">ＢＡＬＩ</span> -->
+                                        <!-- <span class="airline-name" style="color: black;">Malaysia Airlines</span> -->
+                                    </div>
+                                    <!-- <img src="assets/img/Layer6.png" alt="Malaysia Airlines" class="airline-logo2"> -->
+                                </div>
+                            </div>
+                        </div>
+                       <!-- <h6 style="color: #ffffff; font-weight: 100; line-height: 1.1;"> Enjoy 20,000 LKR OFF on Flight Bookings | Exclusively for the First 100 Tickets</h6>                          -->
+<!-- <h6 style="color: #ffffff; font-weight: 100; line-height: 1.1;"> Exclusively for the First 100 Tickets</h6>  
+ 
+-->
+<h6 style="color: #ffffff; font-weight: 100; line-height: 1.1;"> Booking Period: June 17 – 22 | Travel Until: Dec 31, 2025</h6>
+<!-- <h6 style="color: #ffffff; font-weight: 100; line-height: 1.1;"> Available for DFCC and HSBC customers only</h6><br> -->
+<!-- <span style="color: #ffffff;"> ● Available for DFCC and HSBC customers only!</span> -->
+                        <!-- <span style="color: #ffffff;"> ● Exclusively for the First 100 Tickets</span> -->
+                        <!-- <span style="color: #ffffff;"> ● Valid for HSBC & DFCC Credit or Debit Cardholders</span><br>
+                        <span style="color: #ffffff;"> ● Booking Period: June 4 – 8 | Travel Until: Dec 31, 2025</span> -->
+
+                        <div class="bank-icons-section" style="width: 600px;">
+                            <div class="bank-icons-container">
+                                <span class="bank-text">Participating Banks:</span>
+                                <img src="https://dev-gateway.aahaas.com/bankIcons/hsbc.png" alt="HSBC" class="bank-icon" title="HSBC">
+                                <img src="https://dev-gateway.aahaas.com/bankIcons/dfcc.png" alt="DFCC" class="bank-icon" title="DFCC Bank">
+                                <img src="https://dev-gateway.aahaas.com/bankIcons/combank.png" alt="Commercial Bank" class="bank-icon" title="Commercial Bank">
+                                <img src="https://dev-gateway.aahaas.com/bankIcons/hnb.png" alt="HNB" class="bank-icon" title="Hatton National Bank">
+                                <img src="https://dev-gateway.aahaas.com/bankIcons/standard.png" alt="Standard Chartered" class="bank-icon" title="Standard Chartered">
+                            </div>
+                        </div>
+
+                        <!-- Daily Airline Schedule -->
+                      
+
+                         <!-- <div style="margin-top: 0%;" class="download-section"> -->
+                            <!-- <div class="app-store-buttons">
+                                <a href="#" class="app-store-btn" target="_blank">
+                                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on App Store" style="height: 45px; padding-top: 8px;"/>
+                                </a>
+                                <a href="#" class="app-store-btn" target="_blank">
+                                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="" />
+                                </a>
+                            </div> -->
+
+                            <!-- <div class=" ">
+                                <div class="qr-code-container">
+                                    <div class="qr-code">
+                                        <img src="assets/new/quaahaas.png" alt="QR Code" />
+                                    </div>
+                                </div>
+                                <div class="website-info">
+                                     <a href="#" class="app-store-btn" target="_blank">
+                                    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on App Store" style="height: 45px; padding-top: 8px;"/>
+                                </a>
+                                <a href="#" class="app-store-btn" target="_blank">
+                                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="" />
+                                </a>
+                                    <h5 style="color: black;">Visit Our Website</h5>
+                                    <a href="https://www.aahaas.com" class="website-link" style="color: #ed4242;" target="_blank">www.aahaas.com</a>
+                                   <div style="color: #ed4242;" class="download-text">Scan QR code for download app</div>
+                                </div>
+                            </div> -->
+                        <!-- </div> -->
+                        <!-- Download Section -->
+                       <div style="
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(20px);
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+">
+    <!-- Animated Background Accent -->
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, rgba(237, 66, 66, 0.1), rgba(75, 206, 211, 0.1), rgba(231, 94, 3, 0.1));
+        animation: gradientShift 6s ease-in-out infinite;
+        pointer-events: none;
+    "></div>
+
+    <!-- Travel Package Card -->
+    <div style="
+        position: relative;
+        z-index: 2;
+        flex-shrink: 0;
+    ">
+        <div style="
+            position: relative; 
+            width: 280px;
+            height: 120px;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: all 0.4s ease;
+        "
+        onmouseover="this.style.transform='perspective(1000px) rotateY(0deg) scale(1.02)'"
+        onmouseout="this.style.transform='perspective(1000px) rotateY(-5deg) scale(1)'">
+            
+            <!-- Glow Effect -->
+            <div style="
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                right: -2px;
+                bottom: -2px;
+                background: linear-gradient(45deg, #ed4242, #4bced3, #e75e03);
+                border-radius: 17px;
+                z-index: -1;
+                opacity: 0.6;
+                filter: blur(8px);
+            "></div>
+
+            <!-- Duration Badge -->
+            <div style="
+                position: absolute; 
+                top: 12px; 
+                right: 12px; 
+                display: flex; 
+                z-index: 10;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            ">
+                <div style="
+                    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); 
+                    color: #1e293b; 
+                    padding: 6px 12px; 
+                    font-size: 11px; 
+                    font-weight: 700; 
+                    border-top-left-radius: 8px; 
+                    border-bottom-left-radius: 8px;
+                    text-shadow: none;
+                    letter-spacing: 0.5px;
+                ">
+                    3 NIGHTS
+                </div>
+                <div style="
+                    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); 
+                    color: white; 
+                    padding: 6px 12px; 
+                    font-size: 11px; 
+                    font-weight: 700; 
+                    border-top-right-radius: 8px; 
+                    border-bottom-right-radius: 8px;
+                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+                    letter-spacing: 0.5px;
+                ">
+                    4 DAYS
+                </div>
+            </div>
+
+            <!-- Package Items Container -->
+            <div style="position: absolute; bottom: 12px; left: 12px; right: 12px;">
+                <div style="
+                    background: rgba(0, 0, 0, 0.7); 
+                    backdrop-filter: blur(15px); 
+                    border-radius: 10px; 
+                    border: 1px solid rgba(255, 255, 255, 0.1); 
+                    padding: 15px;
+                    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+                ">
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
+                        
+                        <!-- 3 Star Hotel -->
+                        <div style="
+                            display: flex; 
+                            flex-direction: column; 
+                            align-items: center; 
+                            text-align: center; 
+                            color: white;
+                            transition: all 0.3s ease;
+                        "
+                        onmouseover="this.style.transform='translateY(-2px)'; this.style.filter='brightness(1.2)'"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.filter='brightness(1)'">
+                            <div style="
+                                width: 28px; 
+                                height: 28px; 
+                                margin-bottom: 6px; 
+                                display: flex; 
+                                align-items: center; 
+                                justify-content: center;
+                                background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+                                border-radius: 8px;
+                                border: 1px solid rgba(255, 255, 255, 0.1);
+                            ">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 21h18"/>
+                                    <path d="M5 21V7l8-4v18"/>
+                                    <path d="M19 21V11l-6-4"/>
+                                    <path d="M9 9v.01"/>
+                                    <path d="M9 12v.01"/>
+                                    <path d="M9 15v.01"/>
+                                    <path d="M9 18v.01"/>
+                                </svg>
+                            </div>
+                            <div style="font-size: 9px; line-height: 1.3; font-weight: 600;">
+                                <div>3★ Hotel</div>
+                                <div style="opacity: 0.8;">3 Nights</div>
+                            </div>
+                        </div>
+
+                        <!-- Airport Transfer -->
+                        <div style="
+                            display: flex; 
+                            flex-direction: column; 
+                            align-items: center; 
+                            text-align: center; 
+                            color: white;
+                            transition: all 0.3s ease;
+                        "
+                        onmouseover="this.style.transform='translateY(-2px)'; this.style.filter='brightness(1.2)'"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.filter='brightness(1)'">
+                            <div style="
+                                width: 28px; 
+                                height: 28px; 
+                                margin-bottom: 6px; 
+                                display: flex; 
+                                align-items: center; 
+                                justify-content: center;
+                                background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+                                border-radius: 8px;
+                                border: 1px solid rgba(255, 255, 255, 0.1);
+                            ">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M8 6v6"/>
+                                    <path d="M15 6v6"/>
+                                    <path d="M2 12h19.6"/>
+                                    <path d="m2 8 2.5-3h15L22 8"/>
+                                    <path d="M7 14a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+                                    <path d="M21 14a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+                                </svg>
+                            </div>
+                            <div style="font-size: 9px; line-height: 1.3; font-weight: 600;">
+                                <div>Airport</div>
+                                <div style="opacity: 0.8;">Transfer</div>
+                            </div>
+                        </div>
+
+                        <!-- City Tour -->
+                        <div style="
+                            display: flex; 
+                            flex-direction: column; 
+                            align-items: center; 
+                            text-align: center; 
+                            color: white;
+                            transition: all 0.3s ease;
+                        "
+                        onmouseover="this.style.transform='translateY(-2px)'; this.style.filter='brightness(1.2)'"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.filter='brightness(1)'">
+                            <div style="
+                                width: 28px; 
+                                height: 28px; 
+                                margin-bottom: 6px; 
+                                display: flex; 
+                                align-items: center; 
+                                justify-content: center;
+                                background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+                                border-radius: 8px;
+                                border: 1px solid rgba(255, 255, 255, 0.1);
+                            ">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M8 6v6"/>
+                                    <path d="M15 6v6"/>
+                                    <path d="M2 12h19.6"/>
+                                    <path d="M5 18H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h20a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-3"/>
+                                    <path d="M7 18a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+                                    <path d="M21 18a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
+                                    <path d="M8 14v.01"/>
+                                    <path d="M16 14v.01"/>
+                                </svg>
+                            </div>
+                            <div style="font-size: 9px; line-height: 1.3; font-weight: 600;">
+                                <div>City Tour</div>
+                                <div style="opacity: 0.8;">SIC</div>
+                            </div>
+                        </div>
+
+                        <!-- BB Basis -->
+                        <div style="
+                            display: flex; 
+                            flex-direction: column; 
+                            align-items: center; 
+                            text-align: center; 
+                            color: white;
+                            transition: all 0.3s ease;
+                        "
+                        onmouseover="this.style.transform='translateY(-2px)'; this.style.filter='brightness(1.2)'"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.filter='brightness(1)'">
+                            <div style="
+                                width: 28px; 
+                                height: 28px; 
+                                margin-bottom: 6px; 
+                                display: flex; 
+                                align-items: center; 
+                                justify-content: center;
+                                background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+                                border-radius: 8px;
+                                border: 1px solid rgba(255, 255, 255, 0.1);
+                            ">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 8h1a4 4 0 1 1 0 8h-1"/>
+                                    <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/>
+                                    <line x1="6" x2="6" y1="2" y2="4"/>
+                                    <line x1="10" x2="10" y1="2" y2="4"/>
+                                    <line x1="14" x2="14" y1="2" y2="4"/>
+                                </svg>
+                            </div>
+                            <div style="font-size: 9px; line-height: 1.3; font-weight: 600;">
+                                <div>BB Basis</div>
+                                <div style="opacity: 0.8;">Meals</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Download Section -->
+    <div style="
+        position: relative;
+        z-index: 2;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    ">
+        <!-- QR Code -->
+        <div style="
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            padding: 8px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        "
+        onmouseover="this.style.transform='scale(1.05) rotate(2deg)'; this.style.boxShadow='0 12px 35px rgba(0, 0, 0, 0.25)'"
+        onmouseout="this.style.transform='scale(1) rotate(0deg)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.15)'">
+            <img src="assets/new/logoNew.png" alt="QR Code" style="
+                width: 100%;
+                height: 100%;
+                border-radius: 8px;
+                object-fit: cover;
+            "/>
+        </div>
+
+        <!-- App Store Buttons -->
+        <div style="
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
+        ">
+            <!-- App Store -->
+            <a href="https://apps.apple.com/lk/app/aahaas-lifestyle-travel-app/id6450589764" target="_blank" style="
+                display: block;
+                transition: all 0.3s ease;
+                border-radius: 12px;
+                overflow: hidden;
+                /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); */
+                transform: translateX(0);
+                /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); */
+                /* backdrop-filter: blur(10px); */
+                /* border: 1px solid rgba(255, 255, 255, 0.2); */
+                /* padding: 4px; */
+                padding-left: 8px;
+            "
+            onmouseover="this.style.transform='translateX(5px) scale(1.02)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.25)'"
+            onmouseout="this.style.transform='translateX(0) scale(1)'; this.style.boxShadow='0 6px 20px rgba(0, 0, 0, 0.15)'">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on App Store" style="
+                    height: 42px;
+                    width: auto;
+                    display: block;
+                    border-radius: 9px;
+                "/>
+            </a>
+
+            <!-- Google Play -->
+            <a href="https://play.google.com/store/apps/details?id=com.aahaastech.aahaas" target="_blank" style="
+                display: block;
+                transition: all 0.3s ease;
+                border-radius: 12px;
+                overflow: hidden;
+                /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); */
+                transform: translateX(0);
+                /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); */
+                /* backdrop-filter: blur(10px); */
+                /* border: 1px solid rgba(255, 255, 255, 0.2); */
+                /* padding: 1px; */
+                /* padding-right: 20px; */
+            "
+            onmouseover="this.style.transform='translateX(5px) scale(1.02)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.25)'"
+            onmouseout="this.style.transform='translateX(0) scale(1)'; this.style.boxShadow='0 6px 20px rgba(0, 0, 0, 0.15)'">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" style="
+                    height: 55px;
+                    width: auto;
+                    display: block;
+                    border-radius: 9px;
+                "/>
+            </a>
+        </div>
+
+        <!-- Download Text -->
+        <!-- <div style="
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 11px;
+            font-weight: 500;
+            text-align: center;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        ">
+            📱 Scan QR or Download App
+        </div> -->
+    </div>
+</div>
+
+                    </div>
+                  
+                    
+                    <!--end col-sm-7 col-md-7-->
+                    <div class="col-sm-3 d-none d-sm-block">
+                        <div class="owl-carousel text-center" data-owl-nav="1" data-owl-loop="1">
+                              <img src="assets/new/Iphone 6.9 size flight1.png" class="d-inline-block mw-100 p-md-5 p-lg-0 ts-width__auto" alt="">
+                            <img src="assets/new/Iphone 6.9 size home.png" class="d-inline-block mw-100 p-md-5 p-lg-0 ts-width__auto" alt="">
+                        </div>
+                    </div>
+                    <!--end col-sm-5 col-md-5 col-xl-5-->
+                </div>
+                <!--end row-->
+            </div>
+            <!--end container-->
+
+            <div id="ts-dynamic-waves" class="ts-background">
+                <svg class="ts-svg ts-z-index__1 ts-flip-x" width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <defs></defs>
+                    <path class="ts-dynamic-wave" id="wave-1" d="" data-wave-color="#fff" data-wave-height=".2" data-wave-bones="4" data-wave-speed="0.5"/>
+                </svg>
+                <svg class="ts-svg ts-z-index__1" width="100%" height="50%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <defs></defs>
+                    <path class="ts-dynamic-wave" id="wave-2" d="" data-wave-color="#fff" data-wave-height=".2" data-wave-bones="6" data-wave-speed="0.3"/>
+                </svg>
+                <div class="ts-background-image ts-parallax-element" data-bg-image="assets/new/ahmed-galal-5-2FD8DCfB0-unsplash.jpg"></div>
+            </div>
+
+        </header>
+     
+        </main>
+        <!--end #content-->
+
+        <!--*********************************************************************************************************-->
+        <!--************ FOOTER *************************************************************************************-->
+        <!--*********************************************************************************************************-->
+     
+        <!--end #footer-->
+    </div>
+    <!--end page-->
+
+    <script>
+        if( document.getElementsByClassName("ts-full-screen").length ) {
+            document.getElementsByClassName("ts-full-screen")[0].style.height = window.innerHeight + "px";
+        }
+    </script>
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyBEDfNcQRmKQEyulDN8nGWjLYPm8s4YB58"></script>
+	<script src="assets/js/isInViewport.jquery.js"></script>
+	<script src="assets/js/jquery.particleground.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="assets/js/scrolla.jquery.min.js"></script>
+	<script src="assets/js/jquery.validate.min.js"></script>
+	<script src="assets/js/jquery-validate.bootstrap-tooltip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+    <script src="assets/js/jquery.wavify.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <!--Google map-->
+
+    <script>
+        var latitude = 34.038405;
+        var longitude = -117.946944;
+        var markerImage = "assets/img/map-marker.png";
+        var mapElement = "map";
+        var mapStyle = [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#dbdbdb"},{"visibility":"on"}]}];
+        google.maps.event.addDomListener(window, 'load', simpleMap(latitude, longitude, markerImage, mapStyle, mapElement));
+    </script>
+
+</body>
+</html>
