@@ -185,6 +185,159 @@
 }
     </style>
 
+   <style>
+       .airline-schedule {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 12px;
+    margin: 15px 0;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    width: 600px;
+}
+
+.airline-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.airline-day {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    background: rgba(12, 12, 32, 0.325);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    flex: 1;
+    min-width: 100px;
+}
+
+.airline-day:hover {
+    background: rgba(9, 10, 35, 0.464);
+    transform: translateY(-2px);
+}
+
+.airline-day.today {
+    background: rgba(237, 66, 66, 0.15);
+    border: 1px solid #ed4242;
+}
+
+.day-date {
+    font-weight: 600;
+    color: #ed4242;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.airline-name {
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 13px;
+    flex: 1;
+    margin-right: 6px;
+}
+
+.airline-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: white;
+}
+
+.airline-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-right: 6px;
+}
+
+.bank-icons-section {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.bank-icons-container {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.bank-icon {
+    width: "100%";
+    height: 30px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+.bank-icon:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.bank-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.schedule-title {
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.schedule-title::before {
+
+    margin-right: 4px;
+    font-size: 10px;
+}
+
+@media (max-width: 768px) {
+    .airline-schedule {
+        padding: 15px;
+        margin: 15px 0;
+           width: 300px;
+    }
+    
+    .airline-row {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .airline-day {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .day-date {
+        font-size: 10px;
+    }
+    
+    .airline-name {
+        font-size: 12px;
+    }
+    
+    .airline-logo {
+        width: 14px;
+        height: 14px;
+    }
+}
+    </style>
+
 </head>
 <body data-spy="scroll" data-target=".navbar" class="has-loading-screen" data-bg-parallax="scroll" data-bg-parallax-speed="3">
     <div class="ts-page-wrapper" id="page-top">
@@ -274,77 +427,18 @@
                     <div class="col-sm-9"> 
                         <!-- <h4 style="color:#0c0c0c; font-weight: bold;" class="ts-font-color__black ts-opacity__50">Explore the World for Less</h4> -->
                         <!-- <h1 style="color: rgb(253, 253, 253); font-weight: bold;"> Save <span style="color: #ed4242;">20,000 LKR</span> on Flights! First 100 Only</h1> -->
-                        <h1 style="color: rgb(253, 253, 253); font-weight: bold; "> Enjoy <span style="color: #ed4242;">Rs. 5000</span> OFF on Flight Bookings! </h1>
-<h2>Book Now & Save!</h2>
-<h3>Limited-Time Offer — Don’t Miss Out!</h3>
-
-   <div class="airline-schedule d-none">
-                            <div class="schedule-title">Featured Airlines</div>
-                            
-                            <div class="airline-row">
-                                <div class="airline-day">
-                                    <!-- <div class="airline-content">
-                                        <span class="day-date">Tue, Jun 17</span>
-                                        <span class="airline-name" style="color: black;">Malaysia Airlines</span>
-                                    </div> -->
-                                    <img src="assets/img/Layer1.png" alt="Malaysia Airlines" class="airline-logo2">
-                                </div>
-                                
-                                 <div class="airline-day">
-                                    <!-- <div class="airline-content">
-                                        <span class="day-date">Tue, Jun 17</span>
-                                        <span class="airline-name" style="color: black;">Malaysia Airlines</span>
-                                    </div> -->
-                                    <img src="assets/img/Layer2.png" alt="Malaysia Airlines" class="airline-logo2">
-                                </div>
-                                
-                                 <div class="airline-day ">
-                                    <!-- <div class="airline-content">
-                                        <span class="day-date">Tue, Jun 17</span>
-                                        <span class="airline-name" style="color: black;">Malaysia Airlines</span>
-                                    </div> -->
-                                    <img src="assets/img/Layer3.png" alt="Malaysia Airlines" class="airline-logo2">
-                                </div>
-                            </div>
-                            
-                            <div class="airline-row">
-                                 <div class="airline-day">
-                                    <!-- <div class="airline-content">
-                                        <span class="day-date">Tue, Jun 17</span>
-                                        <span class="airline-name" style="color: black;">Malaysia Airlines</span>
-                                    </div> -->
-                                    <img src="assets/img/Layer4.png" alt="Malaysia Airlines" class="airline-logo2">
-                                </div>
-                                
-                                <div class="airline-day ">
-                                    <!-- <div class="airline-content">
-                                        <span class="day-date">Tue, Jun 17</span>
-                                        <span class="airline-name" style="color: black;">Malaysia Airlines</span>
-                                    </div> -->
-                                    <img src="assets/img/Layer5.png" alt="Malaysia Airlines" class="airline-logo2">
-                                </div>
-                                
-                                 <div class="airline-day">
-                                    <!-- <div class="airline-content">
-                                        <span class="day-date">Tue, Jun 17</span>
-                                        <span class="airline-name" style="color: black;">Malaysia Airlines</span>
-                                    </div> -->
-                                    <img src="assets/img/Layer6.png" alt="Malaysia Airlines" class="airline-logo2">
-                                </div>
-                            </div>
-                        </div>
+                        <h2 style="color: rgb(253, 253, 253); font-weight: bold; "> Enjoy <span style="color: #ed4242;">20,000 LKR</span> OFF on Flight Bookings! </h2>
+<h3>Exclusively for the First 100 Tickets</h3>
                        <!-- <h6 style="color: #ffffff; font-weight: 100; line-height: 1.1;"> Enjoy 20,000 LKR OFF on Flight Bookings | Exclusively for the First 100 Tickets</h6>                          -->
-<!-- <h6 style="color: #ffffff; font-weight: 100; line-height: 1.1;"> Exclusively for the First 100 Tickets</h6>  
- 
--->
-<h6 style="color: #ffffff; font-weight: 100; line-height: 1.1;"> Book By 31st July</h6>
+<!-- <h6 style="color: #ffffff; font-weight: 100; line-height: 1.1;"> Exclusively for the First 100 Tickets</h6>                          -->
+<h6 style="color: #ffffff; font-weight: 100; line-height: 1.1;"> Booking Period: June 17 – 22 | Travel Until: Dec 31, 2025</h6>
 <!-- <h6 style="color: #ffffff; font-weight: 100; line-height: 1.1;"> Available for DFCC and HSBC customers only</h6><br> -->
 <!-- <span style="color: #ffffff;"> ● Available for DFCC and HSBC customers only!</span> -->
                         <!-- <span style="color: #ffffff;"> ● Exclusively for the First 100 Tickets</span> -->
                         <!-- <span style="color: #ffffff;"> ● Valid for HSBC & DFCC Credit or Debit Cardholders</span><br>
                         <span style="color: #ffffff;"> ● Booking Period: June 4 – 8 | Travel Until: Dec 31, 2025</span> -->
 
-                        <!-- <div class="bank-icons-section" style="width: 600px;">
+                        <div class="bank-icons-section">
                             <div class="bank-icons-container">
                                 <span class="bank-text">Participating Banks:</span>
                                 <img src="https://dev-gateway.aahaas.com/bankIcons/hsbc.png" alt="HSBC" class="bank-icon" title="HSBC">
@@ -353,10 +447,64 @@
                                 <img src="https://dev-gateway.aahaas.com/bankIcons/hnb.png" alt="HNB" class="bank-icon" title="Hatton National Bank">
                                 <img src="https://dev-gateway.aahaas.com/bankIcons/standard.png" alt="Standard Chartered" class="bank-icon" title="Standard Chartered">
                             </div>
-                        </div> -->
+                        </div>
 
                         <!-- Daily Airline Schedule -->
-                      
+                         <div class="airline-schedule">
+                            <div class="schedule-title">Featured Airlines</div>
+                            
+                            <div class="airline-row">
+                                <div class="airline-day today">
+                                    <div class="airline-content">
+                                        <span class="day-date">Tue, Jun 17</span>
+                                        <span class="airline-name">Malaysia Airlines</span>
+                                    </div>
+                                    <img src="https://gateway.aahaas.com/Airlines/MH.png" alt="Malaysia Airlines" class="airline-logo">
+                                </div>
+                                
+                                <div class="airline-day">
+                                    <div class="airline-content">
+                                        <span class="day-date">Wed, Jun 18</span>
+                                        <span class="airline-name">Singapore Airlines</span>
+                                    </div>
+                                    <img src="https://gateway.aahaas.com/Airlines/SQ.png" alt="Singapore Airlines" class="airline-logo">
+                                </div>
+                                
+                                <div class="airline-day">
+                                    <div class="airline-content">
+                                        <span class="day-date">Thu, Jun 19</span>
+                                        <span class="airline-name">Sri Lankan Airlines</span>
+                                    </div>
+                                    <img src="https://gateway.aahaas.com/Airlines/UL.png" alt="Sri Lankan Airlines" class="airline-logo">
+                                </div>
+                            </div>
+                            
+                            <div class="airline-row">
+                                <div class="airline-day">
+                                    <div class="airline-content">
+                                        <span class="day-date">Fri, Jun 20</span>
+                                        <span class="airline-name">China Eastern Airlines</span>
+                                    </div>
+                                    <img src="https://gateway.aahaas.com/Airlines/MU.png" alt="China Eastern Airlines" class="airline-logo">
+                                </div>
+                                
+                                <div class="airline-day">
+                                    <div class="airline-content">
+                                        <span class="day-date">Sat, Jun 21</span>
+                                        <span class="airline-name">Qatar Airways</span>
+                                    </div>
+                                    <img src="https://gateway.aahaas.com/Airlines/QR.png" alt="Qatar Airways" class="airline-logo">
+                                </div>
+                                
+                                <div class="airline-day">
+                                    <div class="airline-content">
+                                        <span class="day-date">Sun, Jun 22</span>
+                                        <span class="airline-name">Emirates</span>
+                                    </div>
+                                    <img src="https://gateway.aahaas.com/Airlines/EK.png" alt="Emirates" class="airline-logo">
+                                </div>
+                            </div>
+                        </div>
 
                          <!-- <div style="margin-top: 0%;" class="download-section"> -->
                             <!-- <div class="app-store-buttons">
