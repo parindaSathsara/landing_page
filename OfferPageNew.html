@@ -620,6 +620,10 @@
           padding: 1rem 0;
         }
 
+        .offer-badge {
+          align-self: center;
+        }
+
         .main-content {
           grid-template-columns: 1fr;
           gap: 2rem;
@@ -628,6 +632,7 @@
 
         .main-title {
           font-size: 3.5rem;
+          margin-bottom: -5px;
         }
 
         .subtitle {
@@ -639,7 +644,7 @@
         }
 
         .phone-mockup {
-          max-width: 280px;
+          max-width: 400px;
         }
       }
 
@@ -685,7 +690,6 @@
         <nav class="nav-links">
           <button
             onclick="window.parent.postMessage({ type: 'openLink', url: 'https://www.aahaas.com' }, '*');"
-   
             class="visit-website-btn"
           >
             Visit Aahaas
